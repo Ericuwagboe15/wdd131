@@ -1,0 +1,95 @@
+:root{
+
+    --primary-color: #BA2A1D;
+    --secondary-color: #250806;
+    --main-color: #F9DBD8;
+    --accent-color: #952217;
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+*{
+    margin: auto;
+    padding: 0;
+}
+body{
+    font-family: var(--font-family);
+}
+span{
+    display: block;
+    background-color: var(--primary-color);
+    color: var(--main-color);
+    text-align: center;
+    font-weight: bold;
+    padding: 3%;
+}
+
+nav{
+    display: flex;
+    background-color: var(--secondary-color);
+    padding: 10px;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-between;
+   
+}
+
+nav ul li{
+    list-style: none; 
+}
+
+nav a{
+    text-decoration: none;
+    color: var(--main-color);
+    margin-left:40px;
+
+}
+
+nav a:hover {
+  text-decoration:overline;
+}
+main{
+  max-width: 1000px;      
+  margin: 0 auto;         
+  padding: 20px;
+    display: grid; 
+    grid-template: auto 1fr auto / auto 1fr auto;
+    gap: 50px;
+    text-align: center;
+}
+.card{
+    grid-column: 1/2;
+    border: groove;
+    
+}
+.mini-card, .mini-card1{
+    display: flex;
+    
+}
+.mini-card p{
+    width: auto;
+    height: auto;
+}
+.card1{
+    grid-column: 3/4;
+    border:groove
+}
+.card h1, .card1 h1{
+    background-color: var(--primary-color);
+    border-radius: 2px;
+    color: var(--main-color);
+    font-size: 16px;
+    margin: 5px 0;
+}
+.card img, .card1 img{
+    width: 200px;
+    height: auto;
+}
+footer{
+    background-color: var(--primary-color);
+    color: var(--main-color);
+    text-align: center;
+    padding: 1%;
+}
+
