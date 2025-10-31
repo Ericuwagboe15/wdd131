@@ -72,7 +72,7 @@ main{
     height: auto;
 }
 
-.card h1{
+.card h1, .card h2{
     background-color: var(--primary-color);
     border-radius: 2px;
     color: var(--main-color);
