@@ -10,33 +10,33 @@
     padding: 0 ;
 }
 
-.navbar{
+nav{
     display: flex;
     background-color: var(--primary-color);
     color: var(--main-color);
     height: 90px;
 }
-.navbar .logo{
+nav .logo{
     font-size: xx-large;
     
 }
 
-.navbar ul{
+nav ul{
     list-style: none;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.navbar ul li{
+nav ul li{
    margin-left: 16px;
 }
 
-.navbar a{
+nav a{
     color: var(--main-color);
     text-decoration: none;
 }
 
-.navbar a:hover{
+nav a:hover{
     text-decoration: overline;
 }
 
@@ -69,7 +69,7 @@ figure > img{
 
 }
 
-figure caption{
+figure figcaption{
     background-color: #F7F2F6;
 }
 
