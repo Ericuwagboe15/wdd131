@@ -1,9 +1,3 @@
-:root{
-      --primary-color: #503047;
-    --secondary-color: #191017;
-    --main-color: #F7F2F6;
-    --accent-color: #89587E;
-}
 @media  screen and (max-width: 768px){
     .nav-links {
   list-style: none;
