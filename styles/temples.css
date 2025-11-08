@@ -39,6 +39,7 @@
 .navbar a:hover{
     text-decoration: overline;
 }
+
 h1, figure{
     text-align: center;
     color: var(--accent-color);
@@ -48,19 +49,12 @@ main{
     width: 80%;
 }
 
-/* .photo{
-    display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 25px;;
-    text-align: center;
-} */
-
 .photo{
     width: 100%;
     display: grid;
     gap: 2rem;
     grid-template-columns: repeat(3, 1fr);
-    /* grid-template-rows: repeat(3, 1fr); */
+    grid-template-rows: repeat(3, 1fr); /* this could be optional,but for best pratices*/
 }
 
 figure{

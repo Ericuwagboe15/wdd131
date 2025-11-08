@@ -1,5 +1,56 @@
-@media  screen and (max-width: 600px){
-    body{
+:root{
+      --primary-color: #503047;
+    --secondary-color: #191017;
+    --main-color: #F7F2F6;
+    --accent-color: #89587E;
+}
+@media  screen and (max-width: 768px){
+    .navbar{
         
+    }
+    .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.nav-links a {
+  color: var(--main-color);
+  text-decoration: none;
+}
+
+/* Hamburger icon */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+  .nav-links {
+     position: absolute;
+    top: 60px;
+    right: -250px; /* hidden by default */
+    width: 200px;
+    background: var(--primary-color);
+    flex-direction: column;
+    text-align: right;
+    padding: 15px;
+    transition: right 0.3s ease; /* smooth slide */
+  }
+
+  .nav-links.active {
+    right: 0; /* slide in */
+  }
+
+  .hamburger {
+    display: block;
+  }
+  .photo{
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 800px){
+    #hamburger{
+       display: none;
     }
 }

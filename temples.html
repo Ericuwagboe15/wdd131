@@ -10,13 +10,13 @@
 <link rel="stylesheet" href="./styles/temples.css">
 <link rel="stylesheet" href="./styles/temples-large.css">
 <script src="./scripts/temples.js"defer></script>
-    <title>Document</title>
+    <title>Temple Album</title>
 </head>
 <body>
   <header>
     <nav class="navbar">
  <div class="logo">Temple Album</div>
- <ul>
+ <ul  class="nav-links" id="navLinks">
     <li>
         <a href="#">Home</a></li>
     <li>
@@ -28,6 +28,9 @@
     <li>
         <a href="#">Small</a></li>
  </ul>
+  <div class="hamburger" id="hamburger">
+        &#9776; 
+      </div>
     </nav>
   </header>  
   <main>
@@ -35,7 +38,7 @@
     <div class="photo">
         <figure>
             <img src="./images/gilbert_arizona_temple.webp" alt="">
-            <caption>SaltLake Temple</caption>
+            <caption>Aba Nigeria Temple</caption>
         </figure>
         <figure>
             <img src="./images/gilbert_arizona_temple.webp" alt="">
@@ -72,8 +75,7 @@
     </div>
   </main>
   <footer>
-    <p>&copy;2025 &par; Eric Uwagboe &par; Nigeria</p>
-    <span id="currentYear"></span>
+    <p>&copy; 2025 &par; Eric Uwagboe &par; Nigeria</p>
     <span id="lastModified"></span>
   </footer>
 </body>
