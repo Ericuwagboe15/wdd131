@@ -1,4 +1,3 @@
-const currentYear = new Date().getFullYear();
-document.getElementById("currentYear").innerHTML = 'Last Modified, ' + currentYear;
-const lastModifieDate = document.lastModified;
-document.getElementById("lastModified").innerHTML = lastModifieDate;
+const lastModified = new Date(document.lastModified);
+const options = { year: "numeric", month: "numeric", day: "numeric", hour: "numeric", minute: "numeric", second: "numeric"};
+document.getElementById("lastModified").innerHTML = "Last Modified " + lastModified.toLocaleString("en-us",options);

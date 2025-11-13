@@ -1,12 +1,12 @@
 @media  screen and (max-width: 768px){
-    .nav-links {
-  list-style: none;
-  display: flex;
-  gap: 20px;
+  .nav-links {
+   /* list-style: none;*/
+    /*display: flex;*/
+    /*gap: 20px;*/
 }
 .nav-links a {
   color: var(--main-color);
-  text-decoration: none;
+  /*text-decoration: none;*/
 }
 
 /* Hamburger icon */
@@ -25,6 +25,7 @@
     text-align: right;
     padding: 15px;
     transition: right 0.3s ease; /* smooth slide */
+    gap: 20px;
   }
 
   .nav-links.active {
