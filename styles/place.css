@@ -54,6 +54,26 @@ main > img{
 }
 footer{
     background-color: var(--primary-color);
+    color: var(--main-color);
     text-align: center;
     height: auto;
+}
+@media screen and (max-width: 768px){
+    nav > h1{
+        font-size: 2rem;
+    }
+    main > img{
+        width: 100%;
+        height: 300px;
+    }
+.box-1, .box-2{
+    position:static;
+    width: 100%;
+    height: 300px;
+    font-weight: bold;
+    font-size: 16px;
+}
+.box-1 h1, .mini-box{
+    background-color: var(--secondary-color);
+}
 }
