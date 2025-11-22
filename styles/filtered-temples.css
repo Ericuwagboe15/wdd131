@@ -2,6 +2,7 @@
       --primary-color: #503047;
     --secondary-color: #191017;
     --main-color: #F7F2F6;
+    --main-color1: #ccc;
     --accent-color: #89587E;
 }
 
@@ -18,7 +19,6 @@ nav{
 }
 nav .logo{
     font-size: xx-large;
-    
 }
 
 nav ul{
@@ -40,37 +40,33 @@ nav a:hover{
     text-decoration: overline;
 }
 
-h1, figure{
+h1{
     text-align: center;
     color: var(--accent-color);
     margin-bottom: 10px;
 }
 main{
-    width: 80%;
+    width: 100%;
 }
 
-.photo{
+.card{
     width: 100%;
     display: grid;
     gap: 2rem;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr); /* this could be optional,but for best pratices*/
-}
-
-figure{
     text-align: center;
     grid-column: span 1;    
     grid-row: span 1;
+    background-color: var(--main-color);
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 0 5px var(--main-color1);
 }
 
-figure > img{
-    width: 100%;
-    background-color: #89587E;
-
-}
-
-figure figcaption{
-    background-color: #F7F2F6;
+.card img {
+  width: 100%;
+  border-radius: 6px;
 }
 
 footer{

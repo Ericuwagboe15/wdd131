@@ -35,9 +35,13 @@
   .hamburger {
     display: block;
   }
-  .photo{
+  main{
+    width: 100%;
+  }
+  .card{
     display: flex;
     flex-direction: column;
+    width: 400px;
   }
 }
 

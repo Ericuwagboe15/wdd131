@@ -80,7 +80,7 @@ const temples = [
     dedicated: "2004, January, 11",
     area: 17500,
     imageUrl:
-      "https://churchofjesuschristtemples.org/assets/img/temples/accra-ghana-temple/accra-ghana-temple-lds-500.jpg"
+      "https://churchofjesuschristtemples.org/assets/img/temples/accra-ghana-temple/accra-ghana-temple-7149.jpg"
      },
   {
     templeName: "Johannesburg South Africa",
@@ -88,7 +88,7 @@ const temples = [
     dedicated: "1985, August, 24",
     area: 19184,
     imageUrl:
-      "https://churchofjesuschristtemples.org/assets/img/temples/johannesburg-south-africa-temple/johannesburg-south-africa-temple-lds-500.jpg"
+      "https://churchofjesuschristtemples.org/assets/img/temples/johannesburg-south-africa-temple/johannesburg-south-africa-temple-22456.jpg"
     },
   {
     templeName: "São Paulo Brazil",
@@ -96,7 +96,7 @@ const temples = [
     dedicated: "1978, October, 30",
     area: 59436,
     imageUrl:
-      "https://churchofjesuschristtemples.org/assets/img/temples/sao-paulo-brazil-temple/ sao-paulo-brazil-temple-lds-500.jpg"
+      "https://churchofjesuschristtemples.org/assets/img/temples/sao-paulo-brazil-temple/sao-paulo-brazil-temple-55945.jpg"
     }
 ];
 
@@ -107,7 +107,7 @@ temples.forEach(temple => {
   card.classList.add("temples");
 
   card.innerHTML = `<h2>${temple.templeName}</h2>
-  <img scr="${temple.imageUrl}" alt="${temple.templeName}" loading="Lazy"
+  <img src="${temple.imageUrl}" alt="${temple.templeName}" width="400" loading="Lazy"
   <p><strong>Location:</strong>${temple.location}</p>
   <p><strong>Dedicated:</strong>${temple.dedicated}</p>
   <p><strong>Area:</strong>${temple.area.toLocaleString()}sq ft</p>`;
