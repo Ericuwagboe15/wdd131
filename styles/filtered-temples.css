@@ -67,6 +67,16 @@ main{
 .card img {
   width: 100%;
   border-radius: 6px;
+  animation: fadein 1s ease-in;
+}
+
+@keyframes fadein{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 
 footer{
