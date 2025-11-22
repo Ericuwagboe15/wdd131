@@ -5,7 +5,6 @@ hamburger.addEventListener('click', () => {
   navLinks.classList.toggle('active');
 });
 
-
 const temples = [
   {
     templeName: "Aba Nigeria",
@@ -107,7 +106,7 @@ temples.forEach(temple => {
   card.classList.add("temples");
 
   card.innerHTML = `<h2>${temple.templeName}</h2>
-  <img src="${temple.imageUrl}" alt="${temple.templeName}" width="400" loading="Lazy"
+  <img src="${temple.imageUrl}" alt="${temple.templeName}" width="200" loading="Lazy"
   <p><strong>Location:</strong>${temple.location}</p>
   <p><strong>Dedicated:</strong>${temple.dedicated}</p>
   <p><strong>Area:</strong>${temple.area.toLocaleString()}sq ft</p>`;
