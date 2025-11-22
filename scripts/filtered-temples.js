@@ -6,14 +6,6 @@ hamburger.addEventListener('click', () => {
 });
 
 
-
-
-
-const lastModified = new Date(document.lastModified);
-const options = { year: "numeric"};
-document.getElementById("lastModified").innerHTML = "last modified " + lastModified.toLocaleString("en-us", options)
-
-
 const temples = [
   {
     templeName: "Aba Nigeria",
@@ -71,8 +63,7 @@ const temples = [
     imageUrl:
     "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
   },
-
-
+   
   {
     templeName: "Salt Lake City Utah",
     location: "Salt Lake City, Utah, United States",
@@ -83,14 +74,14 @@ const temples = [
   
       },
 
-      {
+  {
     templeName: "Accra Ghana",
     location: "Accra, Ghana",
     dedicated: "2004, January, 11",
     area: 17500,
     imageUrl:
       "https://churchofjesuschristtemples.org/assets/img/temples/accra-ghana-temple/accra-ghana-temple-lds-500.jpg"
-  },
+     },
   {
     templeName: "Johannesburg South Africa",
     location: "Johannesburg, South Africa",
@@ -98,29 +89,32 @@ const temples = [
     area: 19184,
     imageUrl:
       "https://churchofjesuschristtemples.org/assets/img/temples/johannesburg-south-africa-temple/johannesburg-south-africa-temple-lds-500.jpg"
-  },
+    },
   {
     templeName: "São Paulo Brazil",
     location: "São Paulo, Brazil",
     dedicated: "1978, October, 30",
     area: 59436,
     imageUrl:
-      "https://churchofjesuschristtemples.org/assets/img/temples/sao-paulo-brazil-temple/sao-paulo-brazil-temple-lds-500.jpg"
-  }
+      "https://churchofjesuschristtemples.org/assets/img/temples/sao-paulo-brazil-temple/ sao-paulo-brazil-temple-lds-500.jpg"
+    }
 ];
 
 const container = document.querySelector("#temples");
 
-temples.forEach(temple=> {
-  const temple = document.createElement("div");
+temples.forEach(temple => {
+  const card = document.createElement("div");
   card.classList.add("temples");
 
   card.innerHTML = `<h2>${temple.templeName}</h2>
-  <img scr="${temple.temple.imageUrl}" alt="${temple.templeName}" loading="Lazy"
+  <img scr="${temple.imageUrl}" alt="${temple.templeName}" loading="Lazy"
   <p><strong>Location:</strong>${temple.location}</p>
   <p><strong>Dedicated:</strong>${temple.dedicated}</p>
   <p><strong>Area:</strong>${temple.area.toLocaleString()}sq ft</p>`;
 
   container.appendChild(card);
 });
- 
+
+const lastModified = new Date(document.lastModified);
+const options = { year: "numeric" , month: "long", day: "numeric", hour: "2-digit", minute: "2-digit" };
+document.getElementById("lastModified").innerHTML = "Last Modified " + lastModified.toLocaleString("en-us", options)
