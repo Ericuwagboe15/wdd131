@@ -58,16 +58,29 @@ main{
     text-align: center;
     grid-column: span 1;    
     grid-row: span 1;
-    background-color: var(--main-color);
+    /*background-color: var(--main-color);*/
     border-radius: 8px;
     padding: 1rem;
     box-shadow: 0 0 5px var(--main-color1);
 }
 
+.card > div{
+    background-color: var(--main-color);
+}
+
 .card img {
-  width: 100%;
+  width: 90%;
+  height: 90%;
+  transition: transform 0.1 ease-in-out;
   border-radius: 6px;
   animation: fadein 1s ease-in;
+}
+
+.card img:hover{
+    transform: scale(1.01);
+}
+.card p{
+    margin-top: 8px;
 }
 
 @keyframes fadein{

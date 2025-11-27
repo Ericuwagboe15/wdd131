@@ -96,22 +96,30 @@ const temples = [
     area: 59436,
     imageUrl:
       "https://churchofjesuschristtemples.org/assets/img/temples/sao-paulo-brazil-temple/sao-paulo-brazil-temple-55945.jpg"
+    },
+    {
+      templeName: "Tokyo Japan",
+      location: "Tokyo, Japan",
+      dedicated: "1980, October, 27",
+      area: 53500,
+      imageUrl:
+      "https://churchofjesuschristtemples.org/assets/img/temples/tokyo-japan-temple/tokyo-japan-temple-8154.jpg"
     }
 ];
 
 const container = document.querySelector("#temples");
 
-temples.forEach(temple => {
+ temples.forEach(temples => {
   const card = document.createElement("div");
   card.classList.add("temples");
 
-  card.innerHTML = `<h2>${temple.templeName}</h2>
-  <img src="${temple.imageUrl}" alt="${temple.templeName}" width="200" loading="Lazy"
-  <p><strong>Location:</strong>${temple.location}</p>
-  <p><strong>Dedicated:</strong>${temple.dedicated}</p>
-  <p><strong>Area:</strong>${temple.area.toLocaleString()}sq ft</p>`;
+  card.innerHTML = `<h2>${temples.templeName}</h2>
+  <img src="${temples.imageUrl}" alt="${temples.templeName}" loading="lazy" 
+  <p><strong>Location:</strong>${temples.location}</p>
+   <p><strong>Dedicated:</strong>${temples.dedicated}</p>
+    <p><strong>Area:</strong>${temples.area.toLocaleString()} sq ft</p>`;
 
-  container.appendChild(card);
+    container.appendChild(card);
 });
 
 const lastModified = new Date(document.lastModified);
