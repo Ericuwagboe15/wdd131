@@ -34,7 +34,7 @@ function setupNavToggle() {
 /* -------------------- MENU DATA -------------------- */
 const menuItems = [
   { id:1, name:"Erica's Jollof", category:'meat', price:1200, img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRA6Jjlr6QK1urtfiaHAbCUmnpovknHFtxzLg&s', alt:'Jollof rice with plantain', featured:true },
-  { id:2, name:"Vegetarian Egusi", category:'vegetarian', price:1000, img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbbvDRL-skKgQUSklmrWqoGaZt0iViNsrwkQ&s', alt:'Bowl of egusi with greens', featured:true },
+  { id:2, name:"Vegetarian Egusi", category:'vegetarian', price:1000, img:'https://simshomekitchen.com/wp-content/uploads/2025/09/Egusi-tripe-cowfootand-meat-in-a-white-bowl.jpg', alt:'Bowl of egusi with greens', featured:true },
   { id:3, name:"Puff Puff", category:'dessert', price:300, img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbbvDRL-skKgQUSklmrWqoGaZt0iViNsrwkQ&s', alt:'Pile of puff puff', featured:false }
 ];
 
