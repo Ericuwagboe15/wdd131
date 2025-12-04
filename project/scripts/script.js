@@ -258,3 +258,44 @@ function observeLazyImages(){
     lazyImages.forEach(img => img.src = img.dataset.src);
   }
 }
+
+/* call this on DOMContentLoaded (or keep it inside your existing init) */
+function setFooterMeta() {
+  // set year(s)
+  const year = new Date().getFullYear();
+  document.querySelectorAll('#year, #year2, #year3, #year4').forEach(el => {
+    if (el) el.textContent = year;
+  });
+
+  // set "Created by De Ericas Tech" text where needed
+  document.querySelectorAll('.created-by').forEach(el => {
+    el.textContent = 'De Ericas Tech';
+  });
+
+  // format and set last modified
+  const lmEl = document.getElementById('lastModified');
+  if (lmEl) {
+    // document.lastModified returns a string; if empty, fall back to now
+    const raw = document.lastModified && document.lastModified !== '' ? document.lastModified : new Date().toString();
+    const lmDate = new Date(raw);
+
+    const options = {
+      weekday: 'long',        // e.g. "Wednesday"
+      day: 'numeric',         // e.g. "2"
+      month: 'long',          // e.g. "December"
+      year: 'numeric',        // e.g. "2025"
+      hour: '2-digit',        // e.g. "05"
+      minute: '2-digit',      // e.g. "14"
+      second: '2-digit',      // e.g. "09"
+      hour12: false
+    };
+    // Use user's locale for nice formatting (or pass 'en-US' etc.)
+    lmEl.textContent = lmDate.toLocaleString(undefined, options);
+  }
+}
+
+/* Example: ensure this runs after DOMContentLoaded */
+document.addEventListener('DOMContentLoaded', () => {
+  setFooterMeta();
+  // ... your other init calls
+});
