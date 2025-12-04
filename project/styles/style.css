@@ -31,7 +31,24 @@ body{
 button{background:var(--brand-color);color:#fff;padding:.6rem .9rem;border:0;border-radius:4px;cursor:pointer}
 button[disabled]{opacity:.6}
 .map{width:100%;height:auto;margin-top:5px;border-radius:2px;}
-footer{border-top:1px solid #eee;padding:1rem 0;margin-top:2rem;background:#fff}
+footer{border-top:1px solid #eee;padding:1rem 0;margin-top:2rem;background:#fff;padding: 20px 0;}
+
+footer .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+footer .container > div:first-child {
+  padding-right: 30px;
+  border-right: 2px solid #fff; 
+}
+
+/* Right side (address) */
+footer .container1 {
+  padding-left: 30px;
+  text-align: right;
+}
 @media (min-width:48rem){
   .hero{grid-template-columns:1fr 1fr;gap:2rem}
   .hero-text{margin-top:0}
