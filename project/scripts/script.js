@@ -53,7 +53,7 @@ function initMenu() {
       const isFav = favs.includes(String(item.id));
       return `
         <article class="card" data-id="${item.id}">
-          <img data-src="${item.img}" alt="${item.alt}" class="lazy" loading="lazy" width="200" height="200">
+          <img data-src="${item.img}" alt="${item.alt}" class="lazy" loading="lazy" width="400" height="400">
           <h4>${item.name}</h4>
           <p class="muted">${item.category} — ₦${item.price}</p>
           <div>
