@@ -1,100 +1,37 @@
 :root{
-    --primary-color: #ccc;
-    --secondary-color: #f4f4f4;
-    --color-1: #140a0a;
-    --font-color: #333;
+  --max-width:1200px;
+  --container-padding:1rem;
+  --brand-color:#b23a2b;
+  --muted:#666;
+  --gap:1rem;
 }
-
-*{
-    margin: auto;
-    padding: 0%;
-    box-sizing: border-box;
-}
-
+*{box-sizing:border-box}
 body{
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: var(--secondary-color);
-    color: var(--font-color);
-    line-height: 1.3;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  line-height:1.45;
+  margin:0;
+  color:#222;
+  background:#fffaf6;
 }
-
-header{
-    background-color: var(--primary-color);
-    padding: 10px 0;
-}
-
-.logo{
-    font-size: xx-large;
-    font-weight: bold;
-    font-family: cursive;
-    cursor: pointer;
-}
-
-nav{
-    display: flex;
-}
-nav ul{
-    display: flex;
-    list-style: none;
-}
-
-nav a{
-    margin-left: 16px;
-    text-decoration: none;
-    color: var(--font-color);
-    font-weight: 400;
-}
-
-nav a :hover{
-    color: var(--font-color);
-    text-decoration: overline;
-}
-
-.contact{
-    background-color: var(--secondary-color);
-    border-radius: 5px;
-    font-weight: bolder;
-    padding: 1rem;
-    transform: scale(ease, 0.3);
-}
-
-.contact:hover{
-    background-color: var(--primary-color);
-    transition: calc(0.3);
-}
-
-.de-hero img{
-    width: 100%;
-    height: 700px;
-}
-
-.text{
-    font-family: fantasy;
-    font-size: 1.6rem;
-    position: absolute;
-    color: var(--secondary-color);
-    top: 70%;
-    right: 15%;
-}
-
-footer{
-    background-color: var(--primary-color);
-    font-family: 'Times New Roman', Times, serif;
-    text-align: center;
-}
-
-.created{
-    font-family: cursive;
-    font-size: small;
-}
-.menu{
-    display: flex;
-    background-color: var(--secondary-color);
-    padding: 2rem;
-    text-align: center;
-}
-
-.menu img{
-    width: 30%;
-    height: 200px;
+.container{max-width:var(--max-width);margin:0 auto;padding:var(--container-padding)}
+.site-header{background:white;border-bottom:1px solid #eee}
+.brand{margin:0;padding:.5rem 0;color:var(--brand-color)}
+.nav-list{list-style:none;margin:0;padding:0;display:flex;gap:1rem}
+.nav-list a{display:inline-block;padding:.6rem;text-decoration:none;color:inherit}
+.skip-link{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
+.skip-link:focus{position:static;width:auto;height:auto;background:#000;color:#fff;padding:.5rem}
+.hero{display:grid;grid-template-columns:1fr;gap:var(--gap);align-items:center;margin:.5rem 0}
+.hero img{width:100%;height:auto;border-radius:6px;display:block}
+.hero-text{position:relative;margin-top:-4rem;background:rgba(255,255,255,.9);padding:1rem;border-radius:6px;max-width:640px}
+.cta{display:inline-block;margin-top:.5rem;padding:.6rem .9rem;background:var(--brand-color);color:#fff;border-radius:4px;text-decoration:none}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+.card{background:white;padding:1rem;border-radius:6px;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+.controls{display:flex;gap:.5rem;align-items:center;margin:1rem 0}
+.simple-form input, .simple-form textarea, .form input, .form textarea, select {width:100%;padding:.5rem;margin:.25rem 0;border:1px solid #ccc;border-radius:4px}
+button{background:var(--brand-color);color:#fff;padding:.6rem .9rem;border:0;border-radius:4px;cursor:pointer}
+button[disabled]{opacity:.6}
+footer{border-top:1px solid #eee;padding:1rem 0;margin-top:2rem;background:#fff}
+@media (min-width:48rem){
+  .hero{grid-template-columns:1fr 1fr;gap:2rem}
+  .hero-text{margin-top:0}
 }
