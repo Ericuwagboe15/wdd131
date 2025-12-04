@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ericas Kitchen — Contact</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="brand">Ericas Kitchen</h1>
+      <nav aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <h2>Contact Us</h2>
+    <form id="contactForm" class="form" aria-label="Contact form" novalidate>
+      <label for="contact-name">Name</label>
+      <input id="contact-name" name="contact-name" required>
+
+      <label for="contact-email">Email</label>
+      <input id="contact-email" name="contact-email" type="email" required>
+
+      <label for="contact-message">Message</label>
+      <textarea id="contact-message" name="contact-message" rows="5" required></textarea>
+
+      <fieldset>
+        <legend>Preferred contact method</legend>
+        <label><input type="radio" name="contact-method" value="email" checked> Email</label>
+        <label><input type="radio" name="contact-method" value="phone"> Phone</label>
+      </fieldset>
+
+      <label for="subscribe">
+        <input id="subscribe" name="subscribe" type="checkbox">
+        Subscribe to newsletter
+      </label>
+
+      <button type="submit">Send</button>
+    </form>
+
+    <section>
+      <h3>Saved submissions (localStorage)</h3>
+      <div id="submissions" aria-live="polite"></div>
+      <button id="clear-submissions">Clear saved submissions</button>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; <span id="year3"></span> Ericas Kitchen</p>
+      <p><a href="references.html">References & Image Credits</a></p>
+    </div>
+  </footer>
+</body>
+</html>
