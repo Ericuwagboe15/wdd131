@@ -46,8 +46,8 @@ footer .container > div:first-child {
 
 /* Right side (address) */
 footer .container1 {
-  padding-left: 30px;
-  text-align: right;
+  font-family:fancy;
+  text-align: center;
 }
 @media (min-width:48rem){
   .hero{grid-template-columns:1fr 1fr;gap:2rem}
