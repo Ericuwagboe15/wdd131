@@ -75,3 +75,4 @@ footer{
   .hero{grid-template-columns:1fr 1fr;gap:2rem}
   .hero-text{margin-top:0}
   footer{display:flex;flex-direction:column;}
+}
