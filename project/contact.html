@@ -1,74 +1,41 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Ericas Kitchen — Contact</title>
-  <link rel="stylesheet" href="styles/style.css">
-  <script src="scripts/script.js"defer></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EriCas Kitchen | Contact</title>
+<link rel="stylesheet" href="styles/style.css">
+<script src="scripts/script.js"defer></script>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header">
-    <div class="container">
-      <h1 class="brand">Ericas Kitchen</h1>
-      <nav aria-label="Primary">
-        <ul class="nav-list">
-          <li><a href="siteplan.html">Home</a></li>
-          <li><a href="menu.html">Menu</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+<header class="header">
+<nav class="nav">
+<h1 class="logo">EriCas Kitchen</h1>
+<ul>
+<li><a href="siteplan.html">Home</a></li>
+<li><a href="menu.html">Menu</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+</header>
 
-  <main id="main" class="container">
-    <h2>Contact Us</h2>
-    <form id="contactForm" class="form" aria-label="Contact form" novalidate>
-      <label for="contact-name">Name</label>
-      <input id="contact-name" name="contact-name" required>
 
-      <label for="contact-email">Email</label>
-      <input id="contact-email" name="contact-email" type="email" required>
+<main class="container">
+<h2>Contact Us</h2>
+<form id="contactForm">
+<label>Name<input type="text" required></label>
+<label>Email<input type="email" required></label>
+<label>Message<textarea required></textarea></label>
+<button type="submit" class="btn">Send</button>
+</form>
+</main>
 
-      <label for="contact-message">Message</label>
-      <textarea id="contact-message" name="contact-message" rows="5" required></textarea>
 
-      <fieldset>
-        <legend>Preferred contact method</legend>
-        <label><input type="radio" name="contact-method" value="email" checked> Email</label>
-        <label><input type="radio" name="contact-method" value="phone"> Phone</label>
-      </fieldset>
-
-      <label for="subscribe">
-        <input id="subscribe" name="subscribe" type="checkbox">
-        Subscribe to newsletter
-      </label>
-
-      <button type="submit">Send</button>
-    </form>
-
-    <section>
-      <h3>Saved submissions (localStorage)</h3>
-      <div id="submissions" aria-live="polite"></div>
-      <button id="clear-submissions">Clear saved submissions</button>
-    </section>
-<div class="map">
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10343.615026758811!2d5.587540118138761!3d6.388898372452931!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x10472d2f72c2a199%3A0xd47457326094f0d1!2sAdolor%20College%20Rd%2C%20Benin%20City%20300103%2C%20Edo!5e0!3m2!1sen!2sng!4v1764879300780!5m2!1sen!2sng" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-</div>
-  </main>
-
-  <footer>
-  <div class="container">
-    <p>&copy; <span id="year"></span> Ericas Kitchen — <span class="created-by">Designed by: De Ericas Tech</span></p><hr>
-    <p>Last modified: <span id="lastModified">Unknown</span></p><hr>
-    <p><a href="references.html">References & Image Credits</a></p><hr>
-  </div>
-<div class="container1">
-<p>35 Ehiorogie Street
-Off Adolor College Road
-Ahuwan, Benin City, Nigeria</p></div>
+<footer class="footer">
+<p>&copy; <span id="year3"></span> EriCas Kitchen | <a href="references.html">References</a></p>
 </footer>
-  </footer>
+
+
+<script src="script.js"></script>
 </body>
 </html>

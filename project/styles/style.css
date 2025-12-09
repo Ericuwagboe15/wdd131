@@ -1,78 +1,261 @@
-:root{
-  --max-width:1200px;
-  --container-padding:1rem;
-  --brand-color:#b23a2b;
-  --muted:#666;
-  --gap:1rem;
-}
-*{box-sizing:border-box}
-body{
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  line-height:1.45;
-  margin:0;
-  color:#222;
-  background:#fffaf6;
-}
-.container{max-width:var(--max-width);margin:0 auto;padding:var(--container-padding)}
-.site-header{background:white;border-bottom:1px solid #eee}
-.brand{margin:0;padding:.5rem 0;color:var(--brand-color);font-family:fancy;}
-.nav-list{list-style:none;margin:0;padding:0;display:flex;gap:1rem}
-.nav-list a{display:inline-block;padding:.6rem;text-decoration:none;color:inherit}
-.skip-link{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
-.skip-link:focus{position:static;width:auto;height:auto;background:#000;color:#fff;padding:.5rem}
-.hero{display:grid;grid-template-columns:1fr;gap:var(--gap);align-items:center;margin:.5rem 0}
-.hero img{width:100%;height:auto;border-radius:6px;display:block}
-.hero-text{position:relative;margin-top:-4rem;background:rgba(255,255,255,.9);padding:1rem;border-radius:6px;max-width:640px}
-.cta{display:inline-block;margin-top:.5rem;padding:.6rem .9rem;background:var(--brand-color);color:#fff;border-radius:4px;text-decoration:none}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
-.card{background:white;padding:1rem;border-radius:6px;box-shadow:0 1px 3px rgba(0,0,0,.06)}
-.controls{display:flex;gap:.5rem;align-items:center;margin:1rem 0}
-.simple-form input, .simple-form textarea, .form input, .form textarea, select {width:100%;padding:.5rem;margin:.25rem 0;border:1px solid #ccc;border-radius:4px}
-button{background:var(--brand-color);color:#fff;padding:.6rem .9rem;border:0;border-radius:4px;cursor:pointer}
-button[disabled]{opacity:.6}
-.map{width:900px;height:300px;margin-top:10px;border-radius:2px;}
-footer{border-top:1px solid #eee;padding:1rem 0;margin-top:2rem;background:#fff;padding: 20px 0;}
+/* ================================
+   EriCas Kitchen - style.css
+   WDD131 Final Project
+   ================================ */
 
-footer .container {
+/* ---------- CSS RESET ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------- ROOT VARIABLES ---------- */
+:root {
+  --primary: #b83227;
+  --secondary: #2f2f2f;
+  --accent: #f2a900;
+  --light: #ffffff;
+  --bg: #fafafa;
+  --border: #e0e0e0;
+  --text-muted: #666;
+  --radius: 10px;
+  --max-width: 1100px;
+}
+
+/* ---------- BASE STYLES ---------- */
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Arial, sans-serif;
+  background-color: var(--bg);
+  color: var(--secondary);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  border-radius: var(--radius);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* ---------- HEADER & NAV ---------- */
+header {
+  background: var(--light);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
 }
 
-.contact{
-    background-color: var(--secondary-color);
-    border-radius: 5px;
-    font-weight: bolder;
-    padding: 1rem;
-    transform: scale(ease, 0.3);
+.brand {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--primary);
 }
 
-.contact:hover{
-    background-color: var(--primary-color);
-    transition: calc(0.3);
+.nav-toggle {
+  background: none;
+  border: 1px solid var(--border);
+  padding: 0.4rem 0.7rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
 }
 
-.de-hero img{
-    width: 100%;
-    height: 700px;
+nav ul {
+  list-style: none;
+  display: none;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
 }
 
-.text{
-    font-family: fantasy;
-    font-size: 1.6rem;
-    position: absolute;
-    color: var(--secondary-color);
-    top: 70%;
-    right: 15%;
+nav ul.open {
+  display: flex;
 }
 
-footer{
-    background-color: var(--primary-color);
-    font-family: 'Times New Roman', Times, serif;
-    text-align: center;
+nav a {
+  padding: 0.4rem 0;
+  font-weight: 500;
 }
-@media (min-width:48rem){
-  .hero{grid-template-columns:1fr 1fr;gap:2rem}
-  .hero-text{margin-top:0}
-  footer{display:flex;flex-direction:column;}
+
+/* ---------- HERO SECTION ---------- */
+.hero {
+  display: grid;
+  gap: 1.5rem;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  color: var(--secondary);
+}
+
+.hero p {
+  color: var(--text-muted);
+}
+
+.btn {
+  display: inline-block;
+  background: var(--primary);
+  color: var(--light);
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--radius);
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+/* ---------- MENU SECTION ---------- */
+.menu-section {
+  margin-top: 3rem;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.2rem;
+  margin-top: 1rem;
+}
+
+.menu-card {
+  background: var(--light);
+  border: 1px solid var(--border);
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  border-radius: var(--radius);
+}
+
+.menu-card h3 {
+  margin-bottom: 0.3rem;
+}
+
+.menu-card p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+/* ---------- ORDER SECTION ---------- */
+.orders {
+  margin-top: 3rem;
+}
+
+.order-box {
+  background: var(--light);
+  border: 1px solid var(--border);
+  padding: 1rem;
+  border-radius: var(--radius);
+  margin-bottom: 1rem;
+}
+
+.order-box strong {
+  color: var(--primary);
+}
+
+/* ---------- FORM (CONTACT PAGE) ---------- */
+form {
+  background: var(--light);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  margin-top: 1.5rem;
+}
+
+label {
+  font-weight: 600;
+  display: block;
+  margin-top: 1rem;
+}
+
+input,
+textarea {
+  width: 100%;
+  margin-top: 0.3rem;
+  padding: 0.6rem;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  font-family: inherit;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.error {
+  color: #b00020;
+  font-size: 0.85rem;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  margin-top: 3rem;
+  border-top: 1px solid var(--border);
+  background: var(--light);
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+/* ---------- MEDIA QUERIES ---------- */
+@media (min-width: 700px) {
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 1.2rem;
+    margin-top: 0;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+
+  .hero {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1000px) {
+  .menu-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }

@@ -1,36 +1,54 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Ericas Kitchen — Home</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EriCas Kitchen | Home</title>
 <link rel="stylesheet" href="styles/style.css">
-  <script src="scripts/script.js"defer></script>
+<script src="scripts/script.js"defer></script>
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">Ericas Kitchen</div>
-            <ul>
-                <li><a href="siteplan.html">Home</a></li>
-                <li><a href="recipes.html">Recipes</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="about.html">About</a></li>
-            </ul>
-            <div class="contact"><a href="http://" class="btn">Contact Us</a></div>
-        </nav>
-    </header>
-    <main>
-       <div class="de-hero"><img src="https://img.freepik.com/premium-photo/happy-family-kitchen_566707-725.jpg?w=2000" alt="This_is_a_de-hero_image." loading="lazy"></div> 
-       <div class="text">
-        <p>where every dish ia a masterpiece, rendered with precision, passion, and a dash of soul...</p>
-       </div>
-       <div id="foods" class="menu"></div>
-    </main>
-    <footer>
-        <p>&copysr;2025 &para; Ericas Kitchen &para; All Rights Reservesed</p>
-        <span id="lastModified"></span>
-        <p class="created">Created By DE ERICAS Tech</p>
-    </footer>
+<header class="header">
+<nav class="nav">
+<h1 class="logo">EriCas Kitchen</h1>
+<button id="navToggle" aria-label="Toggle navigation">☰</button>
+<ul id="navMenu">
+<li><a href="siteplan.html">Home</a></li>
+<li><a href="menu.html">Menu</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+</header>
+
+
+<main class="container">
+<section class="hero">
+<div>
+<h2>Fresh • Affordable • Delicious</h2>
+<p>EriCas Kitchen provides quality home‑style meals prepared with care. Browse our menu and place orders with ease.</p>
+<a href="menu.html" class="btn">View Menu</a>
+</div>
+<img src="images/hero.webp" alt="Delicious Nigerian meals" loading="lazy">
+</section>
+
+
+<section>
+<h2>Why Choose Us</h2>
+<ul class="features">
+<li>✔ Fresh ingredients</li>
+<li>✔ Hygienic preparation</li>
+<li>✔ Affordable pricing</li>
+<li>✔ Fast delivery</li>
+</ul>
+</section>
+</main>
+
+
+<footer class="footer">
+<p>&copy; <span id="year"></span> EriCas Kitchen | <a href="references.html">References</a></p>
+</footer>
+
+
+<script src="script.js"></script>
 </body>
 </html>

@@ -1,58 +1,41 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Ericas Kitchen — Menu</title>
-  <link rel="stylesheet" href="styles/style.css">
-  <script src="scripts/script.js"defer></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EriCas Kitchen | Menu</title>
+<link rel="stylesheet" href="styles/style.css">
+<script src="scripts/script.js"defer></script>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header">
-    <div class="container">
-      <h1 class="brand">Ericas Kitchen</h1>
-      <nav aria-label="Primary">
-        <ul class="nav-list">
-          <li><a href="siteplan.html">Home</a></li>
-          <li><a href="menu.html">Menu</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+<header class="header">
+<nav class="nav">
+<h1 class="logo">EriCas Kitchen</h1>
+<ul>
+<li><a href="siteplan.html">Home</a></li>
+<li><a href="menu.html">Menu</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+</header>
 
-  <main id="main" class="container">
-    <h2>Menu</h2>
-    <p>Filter and favorite dishes — all dynamically rendered.</p>
 
-    <div class="controls">
-      <label for="filter">Filter:</label>
-      <select id="filter" name="filter" aria-label="Filter menu items">
-        <option value="all">All</option>
-        <option value="vegetarian">Vegetarian</option>
-        <option value="meat">Meat</option>
-        <option value="dessert">Dessert</option>
-      </select>
+<main class="container">
+<h2>Our Menu</h2>
+<div id="menuItems" class="menu-grid"></div>
 
-      <button id="show-favorites">Show Favorites</button>
-    </div>
 
-    <section id="menu-grid" class="cards" aria-live="polite">
-      <!-- JS will render menu from array of objects -->
-    </section>
-  </main>
+<h3>Your Order</h3>
+<div id="orderSummary"></div>
+<button id="placeOrder" class="btn">Place Order</button>
+</main>
 
-  <footer>
-  <div class="container">
-    <p>&copy; <span id="year"></span> Ericas Kitchen — <span class="created-by">De Ericas Tech</span></p><hr>
-    <p>Last modified: <span id="lastModified">Unknown</span></p><hr>
-    <p><a href="references.html">References & Image Credits</a></p>
-  </div><hr>
-<div class="container1">
-<p>35 Ehiorogie Street
-Off Adolor College Road
-Ahuwan, Benin City, Nigeria</p></div>
+
+<footer class="footer">
+<p>&copy; <span id="year2"></span> EriCas Kitchen | <a href="references.html">References</a></p>
 </footer>
+
+
+<script src="script.js"></script>
 </body>
 </html>
